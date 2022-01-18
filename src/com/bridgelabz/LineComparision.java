@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class LineComparision {
 
-   static double length1;
+    static double length1;
     static double length2;
     static double x1;
     static double x2;
@@ -14,7 +14,8 @@ public class LineComparision {
     static double x4;
     static double y3;
     static double y4;
-    static public void computeTo() {
+
+    public void computeTo() {
         System.out.println("Welcome to line comparision Program");
 
         Scanner sc = new Scanner(System.in);
@@ -35,18 +36,18 @@ public class LineComparision {
         y3 = sc.nextDouble();
         System.out.println("Enter the value of y4= ");
         y4 = sc.nextDouble();
-        length1 = (Math.sqrt(Math.pow((x2-x1),2))+Math.pow((y2-y1) ,2));
-        System.out.println("length if Line1 is= " +length1);
-        length2 = (Math.sqrt(Math.pow((x4-x3),2))+Math.pow((y4-y3) ,2));
-        System.out.println("length if Line2 is= " +length2);
+        length1 = (Math.sqrt(Math.pow((x2 - x1), 2)) + Math.pow((y2 - y1), 2));
+        System.out.println("length if Line1 is= " + length1);
+        length2 = (Math.sqrt(Math.pow((x4 - x3), 2)) + Math.pow((y4 - y3), 2));
+        System.out.println("length if Line2 is= " + length2);
     }
 
 
-    static public void equalsTo() {
-        if (length1==length2) {
+    public void equalsTo() {
+        if (length1 == length2) {
             System.out.println("Both lines are equal");
 
-        }  else if (length1>length2) {
+        } else if (length1 > length2) {
             System.out.println("Line 1 is greater than Line 2");
 
         } else {
@@ -57,8 +58,9 @@ public class LineComparision {
 
 
     public static void main(String[] args) {
-        computeTo();
-        equalsTo();
-        System.out.println("Try with others values");
+        LineComparision lc = new LineComparision();
+        lc.computeTo();
+        lc.equalsTo();
+        System.out.println("Try with others values.");
     }
 }
